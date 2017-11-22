@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 
 class App extends Component{
 
-   //   data = [
+     // data = [
    //            {rank: 1, name: " Washington University in St.Louis", location: "St.Louis"},
    //            {rank: 2, name: " Universty of Missouri", location: "Columbia"},
    //            {rank: 3, name: " University of Missouri-Kansas City", location: "Kansas City"},
@@ -29,7 +29,7 @@ class App extends Component{
    render() {
 
        return (
- <div className="whole component">
+     <div className="whole component">
                <Header />
                <Main/>
 

@@ -10,10 +10,10 @@ const AllUniversities = () => (
      {
        UniversityAPI.all().map(u => (
 
-         <li key={u.index}>
+         <li key={u.id}>
 
-           <Link to={`/university/${u.index}`}>{u.name}</Link>
-           <div className="col-md-3 offset-md-8">{u.location}</div>
+           <Link to={`/university/${u.id}`}>{u.name}</Link>
+          <div className="col-md-8 offset-md-3">{u.location}</div> 
 
          </li>
 
@@ -23,4 +23,4 @@ const AllUniversities = () => (
  </div>
 )
 
-export default AllUniversities
+export default AllUniversities;

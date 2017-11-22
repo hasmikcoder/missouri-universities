@@ -1,11 +1,11 @@
-import React from 'react';
+ import React from 'react';
 
-const Home = () => (
-  <div>
-    <h1>Welcome to the universities website!</h1>
-  </div>
+ const Home = () => (
+   <div>
+     <h1></h1>
+   </div>
 
-)
+ )
 
 
 
