@@ -1,6 +1,8 @@
 import React, { Component} from 'react';
+import Header from './Header';
 
 const Contact = () => (
+<div >  <Header/>
   <div className="contact_info">
     <ul>
       <li> Mail:     </li>
@@ -8,6 +10,7 @@ const Contact = () => (
       <li> E-mail:  hasvart@gmail.com </li>
     </ul>
   </div>
-)
+  </div>
+);
 
 export default Contact;
