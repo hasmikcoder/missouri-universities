@@ -7,10 +7,4 @@
 
  )
 
-
-
-
-
-
-
 export default Home;

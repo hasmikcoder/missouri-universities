@@ -63,17 +63,21 @@ componentDidMount (){
   }
   return (
 
+<div> <Header/>
 
-    <div>
 
-      <h1>{university.name} (#{university.rank})</h1>
-      <h2>Location: {university.location}</h2>
-      <Link to='/AllUniversities'>Back</Link>
-      <img className="main-university-photo" src={this.state.img}></img>
-      <p>Acceptance Rate: {this.state.acceptanceRate}%</p>
-      <p>SAT Math 75th percentile:{this.state.sat75Math} </p>
-      <p>Website:<a href="{this.state.website}" target="_blank">{this.state.website}</a></p>
+
+    <div className="university-info">
+          <h1>{university.name} (#{university.rank})</h1>
+          <h2>Location: {university.location}</h2>
+          <Link to='/AllUniversities'></Link>
+          <img className="main-university-photo" src={this.state.img}></img>
+          <p>Acceptance Rate: {this.state.acceptanceRate}%</p>
+          <p>SAT Math 75th percentile:{this.state.sat75Math} </p>
+          <p>Website:<a href="{this.state.website}" target="_blank">{this.state.website}</a></p>
     </div>
+  </div>
+
 
 )
     }

@@ -95,10 +95,16 @@ margin-left: 30px;
 
 .contact_info {
   color: #00897f;
-padding-left: 50px;
+  padding-left: 50px;
 }
 
 .main-university-photo {
   max-height: 500px;
   max-width: 600px;
+}
+
+.university-info {
+padding-left: 100px;
+padding-right: 100px;
+padding-top: 0;
 }

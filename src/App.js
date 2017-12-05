@@ -50,7 +50,7 @@ data = [""];
             return (
              <div className="row" key={ index }>
                  <div className="col-md-offset-1">{University.rank}</div>
-                 <div className="col-md-8">
+                 <div className="col-md-10">
                   <a href={index}>{University.name}</a>
                  </div>
                  <div className="col-md-3">{University.location}</div>
