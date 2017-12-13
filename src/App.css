@@ -68,14 +68,13 @@ h3 {
 }
 
 .whole.component {
-    width: 100%;
+  width: 100%;
 }
 
 .container-fluid {
-width: 100%;
-margin-left: 30px;
+  width: 100%;
+  margin-left: 30px;
 }
-
 .container-fluid img{
   width: 100%;
   }
@@ -104,7 +103,7 @@ margin-left: 30px;
 }
 
 .university-info {
-padding-left: 100px;
-padding-right: 100px;
-padding-top: 0;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 0;
 }

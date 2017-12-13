@@ -28,7 +28,7 @@ data = [""];
 
    render() {
 
-       return (
+      return(
      <div className="whole component">
                <Header />
                <Main/>
@@ -37,9 +37,9 @@ data = [""];
             <div className=" container-fluid">
                  <div className="col-md-12"><img src="images/students.jpg" alt="Walking students"/></div>
                     <div className="row">
-                       <div className="col-md-offset-1"><h2> Rank</h2></div>
-                       <div className="col-md-8"><h2>University</h2> </div>
-                       <div className="col-md-3"><h2>Location</h2></div>
+                       <div className="col-md-offset-3"><h2> Rank</h2></div>
+                       <div className="col-md-7"><h2>University</h2> </div>
+                       <div className="col-md-2"><h2>Location</h2></div>
                     </div>
 
 
@@ -49,11 +49,11 @@ data = [""];
          {this.data.map(function(University, index){
             return (
              <div className="row" key={ index }>
-                 <div className="col-md-offset-1">{University.rank}</div>
-                 <div className="col-md-10">
-                  <a href={index}>{University.name}</a>
-                 </div>
-                 <div className="col-md-3">{University.location}</div>
+
+                 <div className="col-md-offset-3">{University.rank}</div>
+                 <div className="col-md-7">{University.name}</div>
+                 <div className="col-md-2">{University.location}</div>
+
             </div>);
         })}
         </div>
@@ -70,12 +70,15 @@ data = [""];
             </div>
 
     </div>
+
+
+
         <h3>Copyright &copy; 2017,  <span>Top 10 Universities</span>,  All Rights Reserved </h3>
 
 </div>
 
 
-   );
+);
   }
 }
 

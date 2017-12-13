@@ -27,7 +27,9 @@ class University extends Component {
 componentDidMount (){
   const university = UniversityAPI.get(
     parseInt(this.props.match.params.id, 10))
-    axios.get(`${NEARBY_SCHOOLS_ROOT_URL}${university.unitid}`)
+   //axios.get('/universityData.json')
+  axios.get(`${NEARBY_SCHOOLS_ROOT_URL}${university.unitid}`)
+
          .then(response => {
            console.log(response.data.result)
 
@@ -42,9 +44,13 @@ componentDidMount (){
            const admission = response.data.result.admission.acceptanceRate;
            this.setState({ acceptanceRate: admission});
 
-            const test = response.data.result.test.sat75Math;
-            console.log (response.data.result.test.sat75Math)
-            this.setState({sat75Math: test});
+            const enrollment =response.data.result.enrollment.total;
+            console.log (response.data.result.enrollment.total)
+            this.setState({total:enrollment});
+
+            const test = response.data.result.test.act75;
+            console.log (response.data.result.test.act75)
+            this.setState({act75: test});
 
             const location = response.data.result.location.website;
             console.log (response.data.result.location.website)
@@ -55,33 +61,32 @@ componentDidMount (){
   render() {
 
 
-  const university = UniversityAPI.get(
+    const university = UniversityAPI.get(
     parseInt(this.props.match.params.id, 10)
-  )
+ )
   if (!university) {
     return <div>Sorry, but the university was not found</div>
   }
-  return (
+    return (
 
 <div> <Header/>
 
 
 
-    <div className="university-info">
-          <h1>{university.name} (#{university.rank})</h1>
-          <h2>Location: {university.location}</h2>
-          <Link to='/AllUniversities'></Link>
-          <img className="main-university-photo" src={this.state.img}></img>
-          <p>Acceptance Rate: {this.state.acceptanceRate}%</p>
-          <p>SAT Math 75th percentile:{this.state.sat75Math} </p>
-          <p>Website:<a href="{this.state.website}" target="_blank">{this.state.website}</a></p>
-    </div>
+       <div className="university-info">
+            <h1>{university.name} (#{university.rank})</h1>
+            <h2>Location: {university.location}</h2>
+            <Link to='/AllUniversities'></Link>
+            <img className="main-university-photo" src={this.state.img}></img>
+            <p>Acceptance Rate:   {this.state.acceptanceRate}%</p>
+            <p>Total enrollment:   {this.state.total}</p>
+            <p>ACT  75th percentile:   {this.state.act75} </p>
+            <p>Website:  <a href="{this.state.website}" target="_blank">{this.state.website}</a></p>
+        
+       </div>
   </div>
-
-
 )
-    }
-
+  }
 }
 
 export default University;

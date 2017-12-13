@@ -7,7 +7,8 @@ const Contact = () => (
 
 
     <ul>
-      <li> Mail:     </li>
+      <li> Mail:  4811 Delmar Blvd,
+       St. Louis, MO 63108   </li>
       <li> Phone:  (314) 932-2370</li>
       <li> E-mail:  hasvart@gmail.com </li>
     </ul>
