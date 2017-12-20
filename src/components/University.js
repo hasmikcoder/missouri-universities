@@ -17,10 +17,6 @@ class University extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      img: "",
-      acceptanceRate: 0,
-      test: "",
-      website: "",
 
     }
   }
@@ -52,9 +48,15 @@ componentDidMount (){
             console.log (response.data.result.test.act75)
             this.setState({act75: test});
 
+            const test1 = response.data.result.test.sat25Math;
+            console.log("test1: " + test1);
+            this.setState({ sat25Math: test1 })
+
             const location = response.data.result.location.website;
             console.log (response.data.result.location.website)
             this.setState ({website: location});
+
+
 
          })
 }
@@ -73,16 +75,18 @@ componentDidMount (){
 
 
 
+
        <div className="university-info">
             <h1>{university.name} (#{university.rank})</h1>
             <h2>Location: {university.location}</h2>
             <Link to='/AllUniversities'></Link>
-            <img className="main-university-photo" src={this.state.img}></img>
+            <img className="main-university-photo" src={this.state.img} ></img>
             <p>Acceptance Rate:   {this.state.acceptanceRate}%</p>
             <p>Total enrollment:   {this.state.total}</p>
             <p>ACT  75th percentile:   {this.state.act75} </p>
-            <p>Website:  <a href="{this.state.website}" target="_blank">{this.state.website}</a></p>
-        
+            <p>SAT 25th Math percentile: {this.state.sat25Math} </p>
+            <p>Website:  <a href={"http://" + this.state.website} target="_blank">{this.state.website}</a></p>
+
        </div>
   </div>
 )
