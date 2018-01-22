@@ -27,26 +27,7 @@ var   data =  [
 
   // fetch universityData
 
-  // const image = response.data.result.school.img;
-  // this.setState({img: image});
-  // console.log(this.state.img)
-  //
-  // const admission = response.data.result.admission.acceptanceRate;
-  // this.setState({ acceptanceRate: admission});
-  //
-  //  const enrollment =response.data.result.enrollment.total;
-  //  console.log (response.data.result.enrollment.total)
-  //  this.setState({total:enrollment});
-  //
-  //  const test = response.data.result.test.act75;
-  //  console.log (response.data.result.test.act75)
-  //  this.setState({act75: test});
-  //
-  //  const location = response.data.result.location.website;
-  //  console.log (response.data.result.location.website)
-  //  this.setState ({website: location});
-  //
-
+  
 
 
 

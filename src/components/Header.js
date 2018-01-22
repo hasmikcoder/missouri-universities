@@ -10,6 +10,7 @@ const Header = () => (
        <a href='/'className="navbar-brand">
          <img src="/images/united-states-flag.png" alt="american flag"/>
             Top 10 Universities in Missouri
+
         </a>
            <div className="container">
                <ul className="nav navbar-nav row">
