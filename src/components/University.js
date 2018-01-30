@@ -3,9 +3,7 @@ import { UniversityAPI } from '../api';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Header from './Header';
-
-
-
+import GoogleMap from './Map';
 
 
 const NEARBY_SCHOOLS_ROOT_URL= "https://www.nearbycolleges.info/api/everything/"
@@ -55,16 +53,15 @@ componentDidMount (){
             const location = response.data.result.location.website;
             console.log (response.data.result.location.website)
             this.setState ({website: location});
-
-
-
+            this.setState({lat : response.data.result.location.lat});
+            this.setState({lng : response.data.result.location.lng});
+            
          })
-}
-  render() {
+       }
+        render() {
 
-
-    const university = UniversityAPI.get(
-    parseInt(this.props.match.params.id, 10)
+     const university = UniversityAPI.get(
+     parseInt(this.props.match.params.id, 10)
  )
   if (!university) {
     return <div>Sorry, but the university was not found</div>
@@ -73,10 +70,7 @@ componentDidMount (){
 
 <div> <Header/>
 
-
-
-
-       <div className="university-info">
+      <div className="university-info">
             <h1>{university.name} (#{university.rank})</h1>
             <h2>Location: {university.location}</h2>
             <Link to='/AllUniversities'></Link>
@@ -86,6 +80,8 @@ componentDidMount (){
             <p>ACT  75th percentile:   {this.state.act75} </p>
             <p>SAT 25th Math percentile: {this.state.sat25Math} </p>
             <p>Website:  <a href={"http://" + this.state.website} target="_blank">{this.state.website}</a></p>
+
+            <div className="map-info"> <GoogleMap lat={this.state.lat} lng={this.state.lng}/> </div>
 
        </div>
   </div>

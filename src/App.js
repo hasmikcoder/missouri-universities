@@ -8,7 +8,7 @@ import Contact from './components/Contact';
 import AllUniversities from './components/AllUniversities';
 import { Switch, Route } from 'react-router-dom'
 import { Link } from 'react-router-dom';
-
+// import Map from '.components/Map';
 
 class App extends Component{
 
@@ -34,6 +34,7 @@ class App extends Component{
                     <Header />
                     <Main/>
 
+
                  <div className=" container-fluid">
                    <div className="col-md-12"><img src="images/students.jpg" alt="Walking students"/></div>
                       <div className="row">
@@ -46,19 +47,17 @@ class App extends Component{
              <AllUniversities/>
 
 
+
           {this.data.map(function(University, index){
             // return (
              // <div className="row" key={ index }>
 
-            //     <div className="col-md-offset-3">{University.rank}</div>
-            //     <div className="col-md-7">{University.name}</div>
-            //      <div className="col-md-2">{University.location}</div>
+              //     <div className="col-md-offset-3">{University.rank}</div>
+              //     <div className="col-md-7">{University.name}</div>
+               //    <div className="col-md-2">{University.location}</div>
 
                //  </div>);
         })}
-
-
-
 
 
       <div className="social_media">
